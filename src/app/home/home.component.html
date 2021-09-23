@@ -1,0 +1,19 @@
+<h2>To-Do List</h2> 
+<div class="main">
+<mat-form-field appearance="outline">
+ 
+    <input matInput placeholder="Enter items"  [(ngModel)]="mydata">
+
+  </mat-form-field>
+ 
+  <button mat-raised-button color="primary" (click)="Onclick()" id="One">ADD</button>
+
+
+  <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of DataArr">{{item}}  <span><button mat-raised-button color="primary" (click)="remove()">Remove</button></span></mat-list-item>
+ 
+    </mat-list>
+
+
+</div>
+<button mat-raised-button color="primary" (click)="getAdd()" id="One">ADD</button>
